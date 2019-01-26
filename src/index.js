@@ -3,7 +3,7 @@ require('./style.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Page extends React.Component () {
+class Page extends React.Component () {
   render(){
     return(
       <div>
