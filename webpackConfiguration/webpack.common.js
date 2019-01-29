@@ -20,27 +20,16 @@ module.exports = {
   },
   module : {
     rules:[
-      // {
-      //     test: /\.js$/,
-      //     loader: 'babel-loader',
-      //     exclude: /node_modules/,
-      //     query: {presets: ['es2015']}
-      //   },
-        {
-        test: /\.(jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/react']
-          }
-        }
-      },
-        // {
-        //   test: /\.jsx$/,
-        //   loader:'babel-loader',
-        //   query: {presets: ['es2015', 'react']}
-        // },
+      {
+ test: /\.(js|jsx)$/,
+ exclude: /node_modules/,
+ use: {
+   loader: 'babel-loader',
+   options: {
+     presets: ['@babel/react']
+   }
+ }
+},
       {
         test:/\.(css|scss)$/,
         use:['style-loader', 'css-loader','sass-loader']
